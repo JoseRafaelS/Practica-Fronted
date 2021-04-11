@@ -1,0 +1,131 @@
+/******* ESTILO GENERALES *******/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* COLORES */
+body {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* MIXIN */
+/* ***** CONTAINER ***** */
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* CAR-CONTAINER */
+}
+.container .card-container {
+  display: flex;
+  justify-content: center;
+}
+.container .card-container .color-1 {
+  background-color: #e38826;
+  border-radius: 5px 0 0 5px;
+}
+.container .card-container .color-2 {
+  background-color: #006970;
+}
+.container .card-container .color-3 {
+  background-color: #004241;
+  border-radius: 0px 5px 5px 0px;
+}
+.container .card-container .card {
+  padding: 30px 30px;
+  color: #f2f2f2;
+  width: 230px;
+  font-weight: 300;
+}
+.container .card-container .card h2 {
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+.container .card-container .card p {
+  margin-top: 15px;
+}
+.container .card-container .card .link-1 {
+  display: block;
+  margin-top: 50px;
+  width: 110px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 30px;
+  text-align: center;
+  color: #e38826;
+  border: 1px solid #fff;
+}
+.container .card-container .card .link-1:hover {
+  background-color: #e38826;
+  color: #fff;
+}
+.container .card-container .card .link-2 {
+  display: block;
+  margin-top: 50px;
+  width: 110px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 30px;
+  text-align: center;
+  color: #006970;
+  border: 1px solid #fff;
+}
+.container .card-container .card .link-2:hover {
+  background-color: #006970;
+  color: #fff;
+}
+.container .card-container .card .link-3 {
+  display: block;
+  margin-top: 50px;
+  width: 110px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 30px;
+  text-align: center;
+  color: #004241;
+  border: 1px solid #fff;
+}
+.container .card-container .card .link-3:hover {
+  background-color: #004241;
+  color: #fff;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    margin: 40px auto;
+    height: auto;
+  }
+  .container .card-container {
+    flex-direction: column;
+  }
+  .container .card-container .card {
+    width: 100%;
+  }
+  .container .card-container .color-1 {
+    border-radius: 5px 5px 0 0px;
+  }
+  .container .card-container .color-3 {
+    background-color: #004241;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

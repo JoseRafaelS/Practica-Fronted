@@ -1,0 +1,152 @@
+/******* ESTILO GENERALES *******/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* COLORES */
+
+$colorOrange:hsl(31, 77%, 52%);
+$colorCyan:hsl(184, 100%, 22%);
+$darkCyan:hsl(179, 100%, 13%);
+$whiteTransparent: hsla(0, 0%, 100%, 0.75);
+$lightGray:hsl(0, 0%, 95%);
+
+body {
+    background-color: $lightGray;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* MIXIN */
+
+@mixin color($color) {
+    display: block;
+    margin-top: 50px;
+    width: 110px;
+    background-color: $lightGray;
+    padding: 5px;
+    border-radius: 30px;
+    text-align: center;
+    color: $color;
+    border: 1px solid #fff;
+}
+
+/* ***** CONTAINER ***** */
+
+.container {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* CAR-CONTAINER */
+    .card-container {
+        display: flex;
+        justify-content: center;
+
+        .color-1 {
+            background-color: $colorOrange;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .color-2 {
+            background-color: $colorCyan;
+        }
+
+        .color-3 {
+            background-color: $darkCyan;
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .card {
+            padding: 30px 30px;
+            color: $lightGray;
+            width: 230px;
+            font-weight: 300;
+
+            h2 {
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+
+            p {
+                margin-top: 15px;
+            }
+
+            .link-1 {
+                @include color($colorOrange);
+
+                &:hover {
+                    background-color: $colorOrange;
+                    color: #fff;
+                }
+            }
+
+            .link-2 {
+                @include color($colorCyan);
+
+                &:hover {
+                    background-color: $colorCyan;
+                    color: #fff;
+                }
+
+            }
+
+            .link-3 {
+                @include color($darkCyan);
+
+                &:hover {
+                    background-color: $darkCyan;
+                    color: #fff;
+                }
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (max-width:700px) {
+
+    .container {
+        margin: 40px auto;
+        height: auto;
+
+        .card-container {
+            flex-direction: column;
+
+            .card {
+                width: 100%;
+            }
+
+            .color-1 {
+
+                border-radius: 5px 5px 0 0px;
+            }
+
+            .color-3 {
+                background-color: $darkCyan;
+                border-radius: 0px 0px 5px 5px;
+            }
+
+        }
+    }
+
+}
